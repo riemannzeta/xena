@@ -20,7 +20,7 @@ By normalizing and combining these factors, the relative quality of each patent 
 
 Using these composite scores, the script produces a comparison and visualization of the relative quality of the two lists of patents. Composite scores are calculated for the first list ("benchmark.csv") — a benchmark set of familiar patents. Percentiles are then assigned to each patent in the first (benchmark) list based on relative composite score within the first list. Next, composite scores are calculated for the the second list ("comparison.csv") — an arbitrary set of unfamiliar patents. Finally, percentiles from the first list are interpolated for patents in the second list using the composite score calculation. A visualization of the relative quality of the benchmark and comparison portfolios is plotted ("xena.png").
 
-![Xena Visualization](xena.png)]
+![Xena Visualization](xena.png)
 
 Last, but not least, using a coefficient of dollars per composite score, a price is assigned to each patent in the comparison list. The resulting "xena.csv" output file provides an estimated price based on the comparable patents used to calculate the coefficient and their sale price. For purposes of demonstration, the coefficient has been set to $1,000,000 (i.e., a patent with a perfect composite score would be equal to $1,000,000). But the coefficient can also be calculated using the benchmark set or any other set of patents sold for which composite scores have been calculated and the sale price is known.
 
@@ -51,7 +51,3 @@ By default, output files are written to the ~/Downloads directory. The output fi
 * xena.png — a visualization of the relative quality of the benchmark and comparison portfolios using composite score as a common metric
 * not_scored.csv — a list of patents in both portfolios that could not be scored due to invalid data (in this case, zero for first claim word count) or expiration
 * xena.csv — the list of patents from the comparison portfolio with a composite score and estimated price based on the benchmark portfolio and coefficient
-
-## License
-
-MIT
