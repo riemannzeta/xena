@@ -142,8 +142,8 @@ def interp_percentiles(bm, cp):
 def xena():
     # Read the CSV files into dataframes and load dataframes into an array
     # benchmark and comparison CSV file names are declared at the top of this file
-    bms = pd.read_csv(benchmark)
-    cmp = pd.read_csv(comparison)
+    bms = pd.read_csv(benchmark, encoding='unicode_escape')
+    cmp = pd.read_csv(comparison, encoding='unicode_escape')
     dfs = [bms, cmp]
 
     # Declare and empty dataframe to catch invalid and expired patents without Composite Scores
